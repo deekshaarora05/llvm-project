@@ -2697,8 +2697,10 @@ void AssemblyWriter::printModule(const Module *M) {
   if (!M->getModuleIdentifier().empty() &&
       // Don't print the ID if it will start a new line (which would
       // require a comment char before it).
-      M->getModuleIdentifier().find('\n') == std::string::npos)
+      M->getModuleIdentifier().find('\n') == std::string::npos){
     Out << "; ModuleID = '" << M->getModuleIdentifier() << "'\n";
+    Out << " Extra Info:: DEEKSHA ARORA 20111017"<<'\n'
+  }
 
   if (!M->getSourceFileName().empty()) {
     Out << "source_filename = \"";
